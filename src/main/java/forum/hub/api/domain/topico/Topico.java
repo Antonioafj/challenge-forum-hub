@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity(name = "Topico")
 @Table(name = "topicos")
@@ -35,11 +36,17 @@ public class Topico {
     @Enumerated(EnumType.STRING)
     private Curso nomeCurso;
 
+    @ElementCollection
+    @CollectionTable(name = "repostas", joinColumns = @JoinColumn(name = "topico_id"))
+    @Column(name = "repostas")
+    private List<String> repostas;
+
     public Topico(DadosTopico dados) {
         this.mensagem = dados.mensagem();
         this.nomeCurso= dados.nomeCurso();
         this.titulo = dados.titulo();
         this.dataCriacao = LocalDateTime.now();
+        this.status = Estado.NAO_RESPONDIDO;
     }
 
     public void atualizarInformacoes(@Valid DadosAtualizaTopico dados) {

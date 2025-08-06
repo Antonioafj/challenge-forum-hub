@@ -28,7 +28,7 @@ public class TopicoController {
 
         var uri = uriBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
 
-        return ResponseEntity.created(uri).body(new DadosListaTopico(topico));
+        return ResponseEntity.created(uri).body(new DadosDetalhamentoTopico(topico));
     }
 
     @GetMapping
