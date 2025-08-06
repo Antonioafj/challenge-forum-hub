@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "Topico")
@@ -59,7 +60,20 @@ public class Topico {
         }
 
     }
+
+    public void atualizarResposta(@Valid DadosRespostaTopico dados) {
+            if (this.repostas == null) {
+                this.repostas = new ArrayList<>();
+            }
+            this.repostas.add(dados.respostas());
+
+
+        if (!this.repostas.isEmpty()) {
+            this.status = Estado.RESPONDIDO;
+        }
+    }
 }
+
 
 
 

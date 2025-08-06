@@ -21,7 +21,8 @@ public record DadosDetalhamentoTopico(
 ) {
 
     public DadosDetalhamentoTopico(Topico topico){
-        this(topico.getId(),
+        this(
+                topico.getId(),
                 topico.getTitulo(),
                 topico.getMensagem(),
                 topico.getDataCriacao(),

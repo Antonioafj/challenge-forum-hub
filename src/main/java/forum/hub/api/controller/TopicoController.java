@@ -11,8 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("topicos")
 public class TopicoController {
@@ -59,6 +57,16 @@ public class TopicoController {
     public ResponseEntity detalhar(@PathVariable Long id){
         var medico = repository.getReferenceById(id);
         return ResponseEntity.ok(new DadosListaTopico(medico));
+    }
+
+    @PatchMapping("/respostas")
+    @Transactional
+    public ResponseEntity responda(@RequestBody @Valid DadosRespostaTopico dados) {
+        var topico = repository.getReferenceById(dados.id());
+        topico.atualizarResposta(dados);
+
+        return ResponseEntity.ok(new DadosDetalhamentoTopico(topico));
+
     }
 }
 
