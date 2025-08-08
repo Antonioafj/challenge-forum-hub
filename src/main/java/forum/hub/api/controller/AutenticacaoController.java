@@ -4,6 +4,7 @@ import forum.hub.api.domain.usuario.DadosAutenticacao;
 import forum.hub.api.domain.usuario.Usuario;
 import forum.hub.api.infra.security.DadosTokenJWT;
 import forum.hub.api.infra.security.TokenService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
