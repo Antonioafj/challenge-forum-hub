@@ -2,7 +2,7 @@
 <img width="850" height="250" alt="Forum Hub" src="https://github.com/user-attachments/assets/e6013aad-e9a6-4375-89fc-84a3efea7dfb" />
 
 
-![Static Badge](https://img.shields.io/badge/Status-Em_Desenvolvimento-blue)
+![Static Badge](https://img.shields.io/badge/Status-Concluido!-blue)
 ![Static Badge](https://img.shields.io/badge/API_REST-green)
 ![Static Badge](https://img.shields.io/badge/Challenge_ONE-Java_Back_End_Alura-00FF00)
 
@@ -16,7 +16,7 @@
   
 * [Status do Projeto](#status-do-Projeto)
   
-  :clap: Em Desenvolvimento!! :muscle:
+  :clap: Feito!! :muscle:
 
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
 
@@ -25,7 +25,8 @@
   - `1`: API com funcionalidades de um fórum.
 
 
-  :clap: Em Desenvolvimento!! :muscle:
+ 
+![forumhub](https://github.com/user-attachments/assets/6e02398b-28c5-42f2-98b5-58e29e9cc625)
 
   
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
